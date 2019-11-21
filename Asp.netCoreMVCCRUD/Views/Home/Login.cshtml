@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+<div class="form-group">
+    <div class="col-md-10">@ViewBag.Message</div>
+</div>
+
+@using (Html.BeginForm())
+{
+    <form action="/Home/Login" method="post">
+        <div class="form-group">
+            <label>Username : </label>
+            <input class="form-control" name="Nama" placeholder="Enter Name" />
+        </div>
+        <div class="form-group">
+            <label>Password : </label>
+            <input class="form-control" name="Password" placeholder="Enter Password" type="password" />
+        </div>
+        <div class="button">
+            <input type="submit" value="Login" />
+            <a href="@Url.Action("Index", "Home")">Daftar</a>
+        </div>
+
+    </form>
+
+
+
+}
+
